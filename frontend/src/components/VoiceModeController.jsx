@@ -22,7 +22,7 @@ const VoiceModeController = () => {
 
     } else if (cmd.includes("course") || cmd.includes("lesson")) {
       speak("Opening course");
-      navigate("/course");
+      navigate("/components/coursecard");
     } else if (cmd.includes("logout")) {
       speak("Logging out");
       navigate("/logout");
@@ -96,25 +96,24 @@ const VoiceModeController = () => {
       stopVoiceRecognition();
     }
   };
-
-  return (
-    <div style={{ textAlign: 'center', margin: '20px' }}>
-      <button
-        onClick={toggleVoiceMode}
-        style={{
-          fontSize: '18px',
-          padding: '15px 30px',
-          borderRadius: '30px',
-          backgroundColor: isVoiceModeOn ? '#e53935' : '#43a047',
-          color: '#fff',
-          border: 'none',
-          cursor: 'pointer'
-        }}
-      >
-        {isVoiceModeOn ? '🔇 Stop Voice Mode' : '🎤 Start Voice Mode'}
-      </button>
-    </div>
-  );
-};
+return (
+  <div style={{ textAlign: 'center', margin: '20px' }}>
+    <button
+      onClick={toggleVoiceMode}
+      style={{
+        fontSize: '18px',
+        padding: '15px 30px',
+        borderRadius: '30px',
+        backgroundColor: 'transparent',
+        color: isVoiceModeOn ? '#000000ff' : '#000000ff',
+        border: `2px solid ${isVoiceModeOn ? '#c50a0a' : '#ffffffff'}`,
+        cursor: 'pointer'
+      }}
+    >
+      {isVoiceModeOn ? '🔇 Stop Voice Mode' : '🎤 Start Voice Mode'}
+    </button>
+  </div>
+);
+}
 
 export default VoiceModeController;
