@@ -97,7 +97,7 @@ const VoiceModeController = () => {
     }
   };
 return (
-  <div style={{ textAlign: 'center', margin: '20px' }}>
+  <div style={{ textAlign: 'center', margin: '15px' }}>
     <button
       onClick={toggleVoiceMode}
       style={{

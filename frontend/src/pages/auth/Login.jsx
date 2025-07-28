@@ -16,6 +16,7 @@ const Login = () => {
     e.preventDefault();
     await loginUser(email, password, navigate, fetchMyCourse);
   };
+
   return (
     <div className="auth-page">
       <div className="auth-form">
@@ -23,17 +24,21 @@ const Login = () => {
         <form onSubmit={submitHandler}>
           <label htmlFor="email">Email</label>
           <input
+            id="email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email"
             required
           />
 
           <label htmlFor="password">Password</label>
           <input
+            id="password"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter your password"
             required
           />
 

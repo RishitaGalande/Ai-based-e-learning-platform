@@ -24,7 +24,7 @@ const Home = () => {
         <div className="container">
           {/* Welcome Section */}
           <div className="welcome-section">
-            <h1 className="welcome-title">Welcome to AI Learning</h1>
+            <h1 className="welcome-title">Welcome to EduCoach AI Learning</h1>
             <p className="welcome-subtitle">
               Master Artificial Intelligence, Machine Learning, and Data Science with curated courses and tools.
             </p>

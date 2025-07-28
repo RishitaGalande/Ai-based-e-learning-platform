@@ -28,10 +28,10 @@
   transition: all 0.3s ease;
 }
 
-/* .logo:hover {
+.logo:hover {
   transform: scale(1.05);
   color: #ffd700;
-} */
+}
 
 .logo-text {
   background: linear-gradient(45deg, #2919bb, #c119ab);

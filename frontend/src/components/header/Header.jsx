@@ -26,7 +26,7 @@ const Header = ({ isAuth }) => {
       <div className="header-container">
         {/* Logo */}
         <Link to="/" className="logo">
-          <span className="logo-text">AI Learning</span>
+          <span className="logo-text">EduCoach AI</span>
         </Link>
 
         {/* Navigation Links - Desktop */}
@@ -34,7 +34,7 @@ const Header = ({ isAuth }) => {
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/courses" className="nav-link">Courses</Link>
           <Link to="/about" className="nav-link">About</Link>
-          <Link to="/dashboard" className="nav-link">Dashboard</Link>
+          <Link to="/Dashboard" className="nav-link">Dashboard</Link>
           <Link to="/profile" className="nav-link">Profile</Link>
         </nav>
 
@@ -94,7 +94,7 @@ const Header = ({ isAuth }) => {
           ) : (
             <div className="auth-buttons">
               <Link to="/login" className="btn-secondary">Login</Link>
-              <Link to="/register" className="btn-primary">Premium</Link>
+              <Link to="/premium" className="btn-primary">Premium</Link>
             </div>
           )}
         </div>

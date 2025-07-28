@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
+import profile from "./pages/profile/profile";
 import Header from "./components/header/Header";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
@@ -14,7 +15,7 @@ import Loading from "./components/loading/Loading";
 import Courses from "./pages/courses/Courses";
 import CourseDescription from "./pages/coursedescription/CourseDescription";
 import PaymentSuccess from "./pages/paymentsuccess/PaymentSuccess";
-import Dashbord from "./pages/dashbord/Dashbord";
+import dashbord from "./pages/dashbord/Dashbord";
 import CourseStudy from "./pages/coursestudy/CourseStudy";
 import Lecture from "./pages/lecture/Lecture";
 import AdminDashbord from "./admin/Dashboard/AdminDashbord";
@@ -23,6 +24,8 @@ import AdminUsers from "./admin/Users/AdminUsers";
 import ForgotPassword from "./pages/auth/ForgotPassword";
 import ResetPassword from "./pages/auth/ResetPassword";
 import VoiceModeController from './components/VoiceModeController';
+import Dashboard from "./pages/dashbord/Dashbord";
+import Profile from "./pages/profile/profile";
 
 
 const App = () => {
@@ -39,6 +42,9 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profile" element={<Profile />} />
+            
             <Route
               path="/account"
               element={isAuth ? <Account user={user} /> : <Login />}
@@ -66,8 +72,8 @@ const App = () => {
               element={isAuth ? <PaymentSuccess user={user} /> : <Login />}
             />
             <Route
-              path="/:id/dashboard"
-              element={isAuth ? <Dashbord user={user} /> : <Login />}
+              path="/:id/dashbord"
+              element={isAuth ? <dashbord user={user} /> : <Login />}
             />
             <Route
               path="/course/study/:id"
@@ -80,7 +86,7 @@ const App = () => {
             />
 
             <Route
-              path="/admin/dashboard"
+              path="/admin/Dashboard"
               element={isAuth ? <AdminDashbord user={user} /> : <Login />}
             />
 
@@ -88,10 +94,12 @@ const App = () => {
               path="/admin/course"
               element={isAuth ? <AdminCourses user={user} /> : <Login />}
             />
+            
             <Route
               path="/admin/users"
               element={isAuth ? <AdminUsers user={user} /> : <Login />}
             />
+            
           </Routes>
          
           <Footer />
